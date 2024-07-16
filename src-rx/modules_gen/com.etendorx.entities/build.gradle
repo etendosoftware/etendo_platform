@@ -41,6 +41,7 @@ dependencies {
     implementation 'com.etendorx:das_core:' + project.property('rx.version')
     bundle 'com.etendorx:das_core:' + project.property('rx.version')
     implementation 'com.jayway.jsonpath:json-path:2.8.0'
+    implementation 'net.minidev:json-smart:2.5.1'
 
     if(project.hasProperty('data-rest.enabled') && project.property('data-rest.enabled') == "true") {
         implementation 'org.springframework.data:spring-data-rest-core:4.1.5'
