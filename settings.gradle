@@ -50,4 +50,3 @@ void includeDirs(def subDirs) {
     }
 }
 rootProject.name = "etendo"
-

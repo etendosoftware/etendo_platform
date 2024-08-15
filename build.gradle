@@ -3,7 +3,7 @@ plugins {
     id 'java'
     id 'war'
     id 'maven-publish'
-    id 'com.etendoerp.gradleplugin' version '1.3.1'
+    id 'com.etendoerp.gradleplugin' version '1.3.3'
     // RX
     id 'org.springframework.boot' version '3.1.4'
     id 'io.spring.dependency-management' version '1.1.3'
@@ -15,17 +15,18 @@ sourceCompatibility =  JavaVersion.VERSION_17
 targetCompatibility =  JavaVersion.VERSION_17
 
 etendo {
-    ignoredArtifacts = ['com.etendoerp.etendorx']
-    ignoreConsistencyVerification = true
-    coreVersion = '23.2.4'
-    ignoreCoreJarDependency = true
+    coreVersion = "[21.4.0,24.3.0)"
 }
 
 ant.lifecycleLogLevel = "INFO"
 
 dependencies {
-/*
-    implementation('com.etendoerp.platform:etendo-core:23.2.4') {
+    /*
+    To use Etendo in JAR format delete the Etendo section and uncomment the following line.
+    Then when executing any gradle command the core will be dynamically downloaded as a dependency.
+    Set up the credentials in gradle.properties file
+
+    implementation('com.etendoerp.platform:etendo-core:[22.1.0,24.3.0)') {
         implementation ("org.hibernate:hibernate-core:5.4.2.Final") {
             transitive = false
         }
@@ -46,6 +47,13 @@ repositories {
         credentials {
             username = "${githubUser}"
             password = "${githubToken}"
+        }
+    }
+    maven {
+        url = "https://repo.futit.cloud/repository/etendo-snapshot-jars"
+        credentials {
+            username = "${nexusUser}"
+            password = "${nexusPassword}"
         }
     }
     maven {
