@@ -1,16 +1,24 @@
+githubUser=
+githubToken=
+nexusUser=
+nexusPassword=
+
 context.name=etendo
+
 bbdd.sid=etendo
 bbdd.port=5432
 bbdd.systemUser=postgres
 bbdd.systemPassword=syspass
 bbdd.user=tad
 bbdd.password=tad
-bbdd.host=localhost
 
-githubUser=
-githubToken=
-nexusUser=
-nexusPassword=
+org.gradle.jvmargs=-Xmx2g -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
 
-rx.computedColumns=true
-rx.views=true
+sonarHostUrl=
+sonarToken=
+sonarProjectBaseDir=
+sonarProjectName=
+sonarProjectKey=
+sonarSources=
+sonarBranchName=
+sonarVersion=

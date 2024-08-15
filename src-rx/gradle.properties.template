@@ -14,3 +14,4 @@ bbdd.sessionConfig=select update_dateFormat('DD-MM-YYYY')
 rx.generateCode=true
 rx.computedColumns=true
 rx.views=true
+rx.version=2.0.0-SNAPSHOT
